@@ -7,11 +7,15 @@ export default function CommentCreate({ postId }) {
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    await axios.post(`http://localhost:4001/posts/${postId}/comments`, {
-      content,
-    });
+    try {
+      await axios.post(`http://localhost:4001/posts/${postId}/comments`, {
+        content,
+      });
 
-    setContent("");
+      setContent("");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

@@ -7,9 +7,13 @@ export default function PostCreate() {
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    await axios.post("http://localhost:4000/posts", {
-      title,
-    });
+    try {
+      await axios.post("http://localhost:4000/posts", {
+        title,
+      });
+    } catch (error) {
+      console.log(error.message);
+    }
 
     setTitle("");
   };
