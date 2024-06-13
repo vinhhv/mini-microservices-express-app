@@ -15,6 +15,8 @@ export default function CommentCreate({ postId }) {
       setContent("");
     } catch (error) {
       console.log(error);
+    } finally {
+      setContent("");
     }
   };
 

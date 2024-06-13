@@ -13,9 +13,9 @@ export default function PostCreate() {
       });
     } catch (error) {
       console.log(error.message);
+    } finally {
+      setTitle("");
     }
-
-    setTitle("");
   };
 
   return (
