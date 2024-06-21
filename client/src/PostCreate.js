@@ -8,7 +8,7 @@ export default function PostCreate() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:4000/posts", {
+      await axios.post("http://posts.com:4000/posts", {
         title,
       });
     } catch (error) {
